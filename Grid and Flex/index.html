@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid & Flexbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6">
+    <!-- Flexbox Layout -->
+    <div class="flex space-x-4">
+        <!-- Penjelasan: `flex` membuat container fleksibel, dan `space-x-4` menambahkan jarak horizontal antar item. -->
+        <div class="bg-blue-500 text-white p-4">Box 1</div>
+        <div class="bg-green-500 text-white p-4">Box 2</div>
+        <div class="bg-red-500 text-white p-4">Box 3</div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-3 gap-4 mt-6">
+        <!-- Penjelasan: `grid-cols-3` membuat 3 kolom, dan `gap-4` menambahkan jarak antar item. -->
+        <div class="bg-purple-500 text-white p-4">Grid 1</div>
+        <div class="bg-yellow-500 text-white p-4">Grid 2</div>
+        <div class="bg-teal-500 text-white p-4">Grid 3</div>
+    </div>
+</body>
+</html>

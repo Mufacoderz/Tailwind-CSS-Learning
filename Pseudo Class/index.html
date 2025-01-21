@@ -8,19 +8,70 @@
 </head>
 <body>
 
-    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto hover:bg-sky-700 transition active:bg-sky-900 focus:ring focus:ring-sky-300">Simpan</button>
+    <!-- Tombol dengan berbagai pseudo-class -->
+    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto 
+    hover:bg-sky-700 transition active:bg-sky-900 focus:ring focus:ring-sky-300">Simpan</button>
+    <!-- Penjelasan:
+        - `hover:bg-sky-700`: Mengubah warna background menjadi lebih gelap saat kursor berada di atas tombol.
+        - `active:bg-sky-900`: Mengubah warna background saat tombol ditekan.
+        - `focus:ring focus:ring-sky-300`: Menambahkan efek ring berwarna biru muda saat tombol berada dalam fokus (misalnya, setelah ditekan atau diakses dengan keyboard).
+        - `transition`: Menambahkan efek transisi untuk perubahan gaya, sehingga lebih halus.
+    -->
 
+    <!-- Card dengan pseudo-class grup -->
     <div class="max-w-lg my-10 border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group font-serif">
-        <h class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white"5>My Card</h5>
-        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-wider first-letter:text-7xl first-letter:float-left first-letter:mr-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat cum tempore sed minima, dignissimos inventore optio vero quam ducimus consequuntur explicabo recusandae nemo ullam excepturi repellendus, officiis, quibusdam deleniti fuga?</p>
+        <!-- Penjelasan:
+            - `hover:bg-sky-500`: Mengubah warna background menjadi biru saat card di-hover.
+            - `group`: Utility untuk membuat elemen bersifat "grup" agar child element dapat merespons hover pada parent.
+        -->
+        <h class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">My Card</h5>
+        <!-- Penjelasan:
+            - `group-hover:text-white`: Mengubah warna teks menjadi putih saat card parent di-hover.
+        -->
+        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 
+        first-line:uppercase first-line:tracking-wider 
+        first-letter:text-7xl first-letter:float-left first-letter:mr-3">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat cum tempore sed minima, dignissimos inventore optio vero quam ducimus consequuntur explicabo recusandae nemo ullam excepturi repellendus, officiis, quibusdam deleniti fuga?
+        </p>
+        <!-- Penjelasan:
+            - `group-hover:text-white`: Mengubah warna teks menjadi putih saat card di-hover.
+            - `selection:bg-lime-300 selection:text-slate-900`: Mengatur warna latar belakang dan teks saat teks diseleksi.
+            - `first-line:uppercase`: Membuat huruf pada baris pertama teks menjadi kapital.
+            - `first-line:tracking-wider`: Menambahkan spasi antar huruf di baris pertama.
+            - `first-letter:text-7xl`: Membuat huruf pertama lebih besar (ukuran 7xl).
+            - `first-letter:float-left`: Membuat huruf pertama berada di sebelah kiri dengan teks mengelilinginya.
+            - `first-letter:mr-3`: Menambahkan margin kanan pada huruf pertama.
+        -->
     </div>
 
+    <!-- Form dengan pseudo-class -->
     <div class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md p-5">
         <form action="">
             <label for="email">
                 <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-orange-600 after:ml-0.5">Email</span>
-                <input type="email" name="" id="email" placeholder="masukkan email" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-orange-500 invalid:focus:ring-orange-500 invalid:focus:border-orange-500 peer">
+                <!-- Penjelasan:
+                    - `after:content-['*']`: Menambahkan tanda bintang (*) di akhir teks sebagai indikator wajib.
+                    - `after:text-orange-600`: Mengatur warna bintang menjadi oranye.
+                    - `after:ml-0.5`: Menambahkan margin kiri kecil untuk spasi.
+                -->
+                <input type="email" name="" id="email" placeholder="masukkan email" 
+                class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 
+                focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 
+                invalid:text-orange-500 invalid:focus:ring-orange-500 invalid:focus:border-orange-500 peer">
+                <!-- Penjelasan:
+                    - `placeholder:text-slate-400`: Mengatur warna placeholder.
+                    - `focus:outline-none`: Menghilangkan border default saat elemen fokus.
+                    - `focus:ring-1 focus:ring-sky-500`: Menambahkan ring biru saat input dalam fokus.
+                    - `focus:border-sky-500`: Mengubah warna border menjadi biru saat fokus.
+                    - `invalid:text-orange-500`: Mengubah warna teks menjadi oranye jika input tidak valid.
+                    - `invalid:focus:ring-orange-500 invalid:focus:border-orange-500`: Mengubah ring dan border menjadi oranye jika input tidak valid.
+                    - `peer`: Utility untuk menghubungkan elemen dengan sibling yang menggunakan `peer-*`.
+                -->
                 <p class="m-1 text-sm text-orange-500 invisible peer-invalid:visible">Email tidak valid</p>
+                <!-- Penjelasan:
+                    - `invisible`: Menyembunyikan elemen secara default.
+                    - `peer-invalid:visible`: Menampilkan elemen jika input sibling (dengan kelas `peer`) tidak valid.
+                -->
             </label>
         </form>
     </div>
